@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>صفحة محمية بكلمة سر</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    #content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="login">
+    <h2>ادخل كلمة السر للدخول</h2>
+    <input type="password" id="password" placeholder="كلمة السر" />
+    <button onclick="checkPassword()">دخول</button>
+    <p id="message" style="color:red;"></p>
+  </div>
+
+  <div id="content">
+    <h1 style="text-align:center;">إِنَّا للهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ</h1>
+    <p style="text-align:center; font-size:160%;">المرحوم زهير رمضان<p>
+    
+        <p style="text-align:center;"><img src="OIP.jfif" alt="
+            " style="float:right;width:442px;height:442px;">                                                             زهير رمضان اتولد يوم 21 يونيه سنة 1959 
+            <br>اتخرج من قسم التمثيل فى المعهد العالى للفنون المسرحيه فى دمشق سنة 
+            <br>1983 بقى عضو فى نقابه الفنانين السوريين نقابه الفنانين السوريين انتخبه مجلس نقابة الفنانين بتاريخ 9 آذار 2025 نقيباً للفنانين السوريين</p>
+    <h1>مرحبا بك في الصفحة المحمية!</h1>
+    <p>هذا هو المحتوى الخاص بالصفحة.</p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      const message = document.getElementById('message');
+      const content = document.getElementById('content');
+      const login = document.getElementById('login');
+      
+      const correctPassword = '1234'; // غير كلمة السر هنا حسب ما تريد
+
+      if(input === correctPassword) {
+        login.style.display = 'none';
+        content.style.display = 'block';
+        message.textContent = '';
+      } else {
+        message.textContent = 'كلمة السر غير صحيحة، حاول مرة أخرى.';
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+  
